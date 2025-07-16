@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arithmetic Game - Online Speed Drill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div
+      class="grammarly-desktop-integration"
+      data-grammarly-shadow-root="true"
+    ></div>
+
+    <div id="game">
+      <div id="settings-area">
+        <div class="settings-banner">
+          <h2>Arithmetic Game 2.0</h2>
+          <p>
+            The <strong>Arithmetic Game 2.0</strong> is a fast-paced speed drill
+            where you are given<br />
+            two minutes to solve as many arithmetic problems as you can.<br /><br />
+            Please contact
+            <a href="mailto:zetamacplus@gmail.com">zetamacplus@gmail.com</a> if
+            you find any bugs or have any suggestions!
+          </p>
+
+          <div class="settings-section">
+            <label
+              ><input type="checkbox" id="addition" checked /> Addition</label
+            >
+            <div class="operation-settings">
+              <div class="range-setting">
+                Range: ( <input type="number" id="add-min1" value="2" /> to
+                <input type="number" id="add-max1" value="100" /> ) + (
+                <input type="number" id="add-min2" value="2" /> to
+                <input type="number" id="add-max2" value="100" /> )
+              </div>
+              <div class="decimal-settings" id="addition-decimal">
+                <div class="decimal-row">
+                  <label>Decimal places:</label>
+                  <select id="add-decimal1">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <span>+</span>
+                  <select id="add-decimal2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <label
+              ><input type="checkbox" id="subtraction" checked />
+              Subtraction</label
+            >
+            <div class="operation-settings">
+              <div class="range-setting">
+                Range: ( <input type="number" id="sub-min1" value="2" /> to
+                <input type="number" id="sub-max1" value="100" /> ) - (
+                <input type="number" id="sub-min2" value="2" /> to
+                <input type="number" id="sub-max2" value="100" /> )
+              </div>
+              <div style="margin-top: 5px">
+                <label
+                  ><input type="checkbox" id="allow-negative" /> Allow negative
+                  results</label
+                >
+              </div>
+              <div class="decimal-settings" id="subtraction-decimal">
+                <div class="decimal-row">
+                  <label>Decimal places:</label>
+                  <select id="sub-decimal1">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <span>-</span>
+                  <select id="sub-decimal2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <label
+              ><input type="checkbox" id="multiplication" checked />
+              Multiplication</label
+            >
+            <div class="operation-settings">
+              <div class="range-setting">
+                Range: ( <input type="number" id="mult-min1" value="2" /> to
+                <input type="number" id="mult-max1" value="12" /> ) × (
+                <input type="number" id="mult-min2" value="2" /> to
+                <input type="number" id="mult-max2" value="100" /> )
+              </div>
+              <div class="decimal-settings" id="multiplication-decimal">
+                <div class="decimal-row">
+                  <label>Decimal places:</label>
+                  <select id="mult-decimal1">
+                    <option value="0">0</option>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <span>×</span>
+                  <select id="mult-decimal2">
+                    <option value="0">0</option>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <label
+              ><input type="checkbox" id="division" checked /> Division</label
+            >
+            <div class="operation-settings">
+              <div class="range-setting">
+                Range: ( <input type="number" id="div-min1" value="2" /> to
+                <input type="number" id="div-max1" value="100" /> ) ÷ (
+                <input type="number" id="div-min2" value="2" /> to
+                <input type="number" id="div-max2" value="12" /> )
+              </div>
+              <div style="margin-top: 5px; font-size: 12px; color: #666">
+                Multiplication problems in reverse.
+              </div>
+              <div class="decimal-settings" id="division-decimal">
+                <div class="decimal-row">
+                  <label>Decimal places:</label>
+                  <select id="div-decimal1">
+                    <option value="0">0</option>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <span>÷</span>
+                  <select id="div-decimal2">
+                    <option value="0">0</option>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <label
+              ><input type="checkbox" id="fraction-conversion" /> Fraction
+              Conversion</label
+            >
+            <div class="operation-settings">
+              <div class="fraction-settings" id="fraction-conversion-settings">
+                <div class="fraction-row">
+                  <label
+                    ><input type="checkbox" id="decimal-to-fraction" checked />
+                    Decimal to Fraction</label
+                  >
+                </div>
+                <div class="fraction-row">
+                  <label
+                    ><input type="checkbox" id="fraction-to-decimal" checked />
+                    Fraction to Decimal</label
+                  >
+                </div>
+                <div class="range-setting">
+                  <label>Whole number range for mixed fractions:</label>
+                  <div style="margin-top: 5px">
+                    <input
+                      type="number"
+                      id="fraction-whole-min"
+                      value="0"
+                      min="0"
+                    />
+                    to
+                    <input
+                      type="number"
+                      id="fraction-whole-max"
+                      value="5"
+                      min="0"
+                    />
+                    <div style="font-size: 11px; color: #666; margin-top: 3px">
+                      Set to 0-0 for proper fractions only (no whole numbers)
+                    </div>
+                  </div>
+                </div>
+                <div class="range-setting">
+                  <label>Answer precision (decimal places):</label>
+                  <div style="margin-top: 5px">
+                    <select id="fraction-precision">
+                      <option value="1">1 (0.1)</option>
+                      <option value="2">2 (0.01)</option>
+                      <option value="3" selected>3 (0.001)</option>
+                      <option value="4">4 (0.0001)</option>
+                    </select>
+                    <div style="font-size: 11px; color: #666; margin-top: 3px">
+                      How precise your decimal answer needs to be
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="denominator-settings">
+                <label for="custom-denominators">Custom Denominators:</label>
+                <input
+                  type="text"
+                  id="custom-denominators"
+                  value="2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 20, 25, 50, 100"
+                  placeholder="Enter denominators separated by commas"
+                />
+                <div class="denominator-note">
+                  Enter denominators separated by commas (e.g., 2, 3, 4, 5, 8,
+                  10)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <label
+              ><input type="checkbox" id="fraction-arithmetic" /> Fraction
+              Arithmetic</label
+            >
+            <div class="operation-settings">
+              <div class="fraction-settings" id="fraction-arithmetic-settings">
+                <div class="fraction-row">
+                  <label
+                    ><input type="checkbox" id="fraction-addition" checked />
+                    Addition</label
+                  >
+                </div>
+                <div class="fraction-row">
+                  <label
+                    ><input type="checkbox" id="fraction-subtraction" checked />
+                    Subtraction</label
+                  >
+                </div>
+              </div>
+              <div class="denominator-note">
+                Uses the same denominators as Fraction Conversion above.<br />
+                Answer can be given as fraction or decimal.
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <label
+              ><input type="checkbox" id="decimal-mode" /> Decimal Mode</label
+            >
+            <div class="decimal-settings" id="decimal-mode-precision">
+              <div class="range-setting">
+                <label>Answer precision (decimal places):</label>
+                <div style="margin-top: 5px">
+                  <select id="answer-precision">
+                    <option value="1">1 (0.1)</option>
+                    <option value="2" selected>2 (0.01)</option>
+                    <option value="3">3 (0.001)</option>
+                    <option value="4">4 (0.0001)</option>
+                  </select>
+                  <div style="font-size: 11px; color: #666; margin-top: 3px">
+                    How precise your answer needs to be to count as correct
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <label>Duration</label>
+            <select id="duration">
+              <option value="30">30 seconds</option>
+              <option value="60">60 seconds</option>
+              <option value="120" selected>120 seconds</option>
+              <option value="180">180 seconds</option>
+              <option value="300">300 seconds</option>
+            </select>
+          </div>
+
+          <div class="start">
+            <button onclick="startGame()">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="game-area" style="display: none">
+        <div class="banner">
+          <span class="left">Seconds left: <span id="timer">120</span></span>
+          <span style="float: right">
+            Score: <span id="score">0</span><br />
+            <span style="font-size: 10px; color: #666"
+              >Projected: <span id="projected-score">0</span></span
+            >
+          </span>
+          <div style="clear: both"></div>
+        </div>
+
+        <div class="game-problem-area">
+          <div class="problem-line">
+            <div class="problem" id="problem">852 ÷ 12 =</div>
+            <div class="answer">
+              <input type="text" id="answer" />
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 15px">
+          <button
+            onclick="stopGame()"
+            style="font-size: 12px; padding: 5px 10px"
+          >
+            Stop Game
+          </button>
+        </div>
+
+        <div class="end" id="end-area" style="display: none">
+          <p>
+            <button onclick="startGame()">Try again</button>
+            <button onclick="showSettings()">Change settings</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load JavaScript files in correct order -->
+    <script src="game.js"></script>
+  </body>
+</html>

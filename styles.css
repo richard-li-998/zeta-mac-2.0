@@ -1,0 +1,257 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.grammarly-desktop-integration {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.grammarly-desktop-integration:before {
+  content: attr(data-content);
+}
+
+#game {
+  margin: 20px;
+}
+
+.left {
+  float: left;
+}
+
+.banner {
+  padding: 10px;
+  margin-bottom: 20px;
+  clear: both;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.settings-banner {
+  background-color: rgba(208, 208, 208, 0.9);
+  padding: 20px;
+  margin: 20px 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
+}
+
+.game-problem-area {
+  background-color: rgba(208, 208, 208, 0.9);
+  padding: 1px 0;
+  margin: 200px 0 20px 0;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.start {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.problem {
+  font-size: 36px;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.answer {
+  margin: 20px 0;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.answer input {
+  font-size: 36px;
+  padding: 2px;
+  border: 2px solid #333;
+  text-align: center;
+  width: 180px;
+  text-align: left;
+}
+
+.problem-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.end {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.correct {
+  color: green;
+}
+
+.settings-section {
+  margin: 20px 0;
+}
+
+.settings-section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.operation-settings {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.range-setting {
+  margin: 5px 0;
+}
+
+.range-setting input {
+  width: 50px;
+  padding: 2px;
+  border: 1px solid #999;
+}
+
+.decimal-settings {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: none;
+}
+
+.decimal-row {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.decimal-row select {
+  padding: 2px;
+  border: 1px solid #999;
+}
+
+.fraction-settings {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: none;
+}
+
+.fraction-row {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fraction-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.denominator-settings {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.denominator-settings label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.denominator-settings input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+  border: 1px solid #999;
+  font-size: 12px;
+}
+
+.denominator-note {
+  font-size: 11px;
+  color: #666;
+  margin-top: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #999;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.description {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.description a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.description a:hover {
+  text-decoration: underline;
+}
+
+.fraction {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.fraction .numerator {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+
+.fraction .denominator {
+  display: block;
+  padding-top: 2px;
+}
+
+.mixed-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  vertical-align: middle;
+}
+
+.mixed-number .whole {
+  font-size: 32px;
+}
